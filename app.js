@@ -16,8 +16,14 @@ const pool = new Pool({
 // use the express-static middleware
 app.use(express.static("public"))
 
+
 // define the first route
 app.get("/", function (req, res) {
+  res.render('index', results );
+})
+
+// define a hello world route
+app.get("/hello-world", function (req, res) {
   res.send("<h1>Hello World!</h1>")
 })
 
